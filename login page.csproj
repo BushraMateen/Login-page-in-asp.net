@@ -207,6 +207,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Homepage.cshtml" />
     <Content Include="Views\Home\RegisterPage.cshtml" />
+    <Content Include="Views\Home\MessageView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
