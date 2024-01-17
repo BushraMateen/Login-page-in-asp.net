@@ -1,4 +1,5 @@
-﻿using System;
+﻿using login_page.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -32,7 +33,15 @@ namespace login_page.Controllers
         }
         public ActionResult RegisterPage()
         {
-            return View();
+            return View();  
+        }
+        public string Register(Register register)
+        {
+            BushraDbEntities4 bushraDbEntities2 = new BushraDbEntities4();
+
+            bushraDbEntities2.Registers.Add(register);
+            bushraDbEntities2.SaveChanges();
+            return "Registered successfully";
         }
     }
 }

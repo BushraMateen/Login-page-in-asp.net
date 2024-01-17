@@ -1,7 +1,30 @@
-﻿
+﻿@model login_page.Models.Register
 @{
     ViewBag.Title = "RegisterPage";
 }
 
 <h2>RegisterPage</h2>
+
+
+<form method="post" action="@Url.Action("Register", "Home")" >
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirstName)
+        @Html.TextBoxFor(m => m.FirstName, "", new { @class = "form-control", @placeholder = "First Name" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.LastName)
+        @Html.TextBoxFor(m => m.LastName, "", new { @class = "form-control", @placeholder = "Last Name" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Password)
+        @Html.TextBoxFor(m => m.Password, "", new { @class = "form-control", @placeholder = "Password" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.City)
+        @Html.TextBoxFor(m => m.City, "", new { @class = "form-control", @placeholder = "City" })
+    </div>
+    <div class="form-group">
+        <input type="submit" name="submit" class="btn btn-danger" value="Register" /> 
+    </div>
+    </form>
 
