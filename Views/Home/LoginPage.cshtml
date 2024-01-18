@@ -7,7 +7,7 @@
 
 <h2>LoginPage</h2>
 
-<form method="post" action="@Url.Action("Register", "Home")">
+<form method="post" action="@Url.Action("LogIn", "Home")">
     <div class="form-group">
         @Html.LabelFor(m => m.FirstName)
         @Html.TextBoxFor(m => m.FirstName, "", new { @class = "form-control", @placeholder = "First Name" })
