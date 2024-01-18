@@ -46,7 +46,7 @@ namespace login_page.Controllers
             if(existingRecord == null)
             {
                 bushraDbEntities2.Registers.Add(register);
-                bushraDbEntities2.SaveChanges();
+                bushraDbEntities2.SaveChanges(); 
                 return View("MessageView");
                  
             }
@@ -56,8 +56,10 @@ namespace login_page.Controllers
                 return RedirectToAction("RegisterPage");
             }
               
-            
-           
+        }
+        public ActionResult LoginPage()
+        {
+            return View();
         }
     }
 }
